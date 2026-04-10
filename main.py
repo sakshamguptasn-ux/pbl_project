@@ -68,7 +68,7 @@ synapses.w = 'rand() * 0.5'
 spikemon = b2.SpikeMonitor(output_group)
 statemon = b2.StateMonitor(output_group, 'R_avg', record=True)
 
-for i in range(100):
+for i in range(1500):
     input_group.rates = data_rates[i] * b2.Hz
     b2.run(duration)
     input_group.rates = 0 * b2.Hz
